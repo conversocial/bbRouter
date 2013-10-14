@@ -13,7 +13,6 @@ return (options) ->
     createRouter = (componentDefinition, wire) ->
         # Did user supply a new routerclass (instead of Backbone default)
         When.promise (resolve) ->
-            console.log 'YEEAAH', componentDefinition.options.routerModule
             if componentDefinition.options.routerModule
                 # instantiate new class 
                 wire.loadModule(componentDefinition.options.routerModule).then (Module) ->
